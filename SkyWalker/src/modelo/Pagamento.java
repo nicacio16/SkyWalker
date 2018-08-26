@@ -12,15 +12,15 @@ import javax.persistence.TemporalType;
 public class Pagamento {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long idPagamento;
+	private Long idPagamento;
 	@Temporal(TemporalType.DATE)
 	private Date dataPagamento;
 
-	public long getIdPagamento() {
+	public Long getIdPagamento() {
 		return idPagamento;
 	}
 
-	public void setIdPagamento(long idPagamento) {
+	public void setIdPagamento(Long idPagamento) {
 		this.idPagamento = idPagamento;
 	}
 

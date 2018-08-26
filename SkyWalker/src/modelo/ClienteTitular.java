@@ -13,7 +13,7 @@ import javax.persistence.TemporalType;
 public class ClienteTitular {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id_cliente;
+	private Long idCliente;
 	@Column(nullable = false)
 	private String nome;
 	@Column(unique = true, nullable = false)
@@ -33,6 +33,14 @@ public class ClienteTitular {
 	private String login;
 	@Column(nullable = false)
 	private String senha;
+
+	public Long getIdCliente() {
+		return idCliente;
+	}
+
+	public void setIdCliente(Long idCliente) {
+		this.idCliente = idCliente;
+	}
 
 	public String getNome() {
 		return nome;
@@ -105,4 +113,5 @@ public class ClienteTitular {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
+
 }

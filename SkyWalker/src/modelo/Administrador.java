@@ -10,7 +10,7 @@ import javax.persistence.Id;
 public class Administrador {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long idAdministrador;
+	private Long idAdministrador;
 	@Column(nullable = false)
 	private String nome;
 	@Column(unique = true, nullable = false)
@@ -20,11 +20,11 @@ public class Administrador {
 	@Column(nullable = false)
 	private String senha;
 
-	public long getIdAdministrador() {
+	public Long getIdAdministrador() {
 		return idAdministrador;
 	}
 
-	public void setIdAdministrador(long idAdministrador) {
+	public void setIdAdministrador(Long idAdministrador) {
 		this.idAdministrador = idAdministrador;
 	}
 
@@ -59,4 +59,5 @@ public class Administrador {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
+
 }

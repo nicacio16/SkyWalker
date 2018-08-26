@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.Query;
 
 import fabrica.Conexao;
 
@@ -98,5 +99,19 @@ public class DAOGenerico<T> {
 		finally {
 			manager.close();
 		}
+	}
+
+	public List<T> consultarCondicao(String consultarCondicao) {
+		manager = Conexao.get().createEntityManager();
+
+		Query query = null;
+		try {
+			query = manager.createQuery("from " + tipoClasse.getSimpleName() + " where " + consultarCondicao);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			manager.close();
+		}
+		return query.getResultList();
 	}
 }

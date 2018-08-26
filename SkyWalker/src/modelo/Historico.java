@@ -13,17 +13,17 @@ import javax.persistence.TemporalType;
 public class Historico {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+	private Long idHistorico;
 	@Column(nullable = false)
 	@Temporal(TemporalType.DATE)
 	private Date dataAcesso;
 
-	public long getId() {
-		return id;
+	public Long getIdHistorico() {
+		return idHistorico;
 	}
 
-	public void setId(long id) {
-		this.id = id;
+	public void setIdHistorico(Long idHistorico) {
+		this.idHistorico = idHistorico;
 	}
 
 	public Date getDataAcesso() {

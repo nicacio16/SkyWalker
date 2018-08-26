@@ -14,7 +14,7 @@ import javax.persistence.TemporalType;
 public class DependenteCliente {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long idDependente;
+	private Long idDependente;
 	@Column(nullable = false)
 	private String nome;
 	@Column(nullable = false)
@@ -27,11 +27,11 @@ public class DependenteCliente {
 	@Column(nullable = false)
 	private String senha;
 
-	public long getIdDependente() {
+	public Long getIdDependente() {
 		return idDependente;
 	}
 
-	public void setIdDependente(long idDependente) {
+	public void setIdDependente(Long idDependente) {
 		this.idDependente = idDependente;
 	}
 

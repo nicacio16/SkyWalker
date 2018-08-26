@@ -15,7 +15,7 @@ public class Cartao {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long idCard;
+	private Long idCartao;
 	@Column(nullable = false, unique = true)
 	private int numCartao;
 	@Column(nullable = false)
@@ -24,12 +24,12 @@ public class Cartao {
 	@Column(nullable = false)
 	private int codSeguranca;
 
-	public long getIdCard() {
-		return idCard;
+	public Long getIdCartao() {
+		return idCartao;
 	}
 
-	public void setIdCard(long idCard) {
-		this.idCard = idCard;
+	public void setIdCartao(Long idCartao) {
+		this.idCartao = idCartao;
 	}
 
 	public int getNumCartao() {

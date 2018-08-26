@@ -8,7 +8,7 @@ public class Conexao {
 
 	public static EntityManagerFactory get() {
 		if (factory == null) {
-			factory = Persistence.createEntityManagerFactory("SkywalkerMoviesPU");
+			factory = Persistence.createEntityManagerFactory("SkyWalker");
 		}
 		return factory;
 	}

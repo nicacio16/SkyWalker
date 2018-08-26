@@ -1,10 +1,13 @@
 package controle;
 
-import daoGenerico.DAOGenerico;
 import java.util.ArrayList;
 import java.util.List;
-import javax.annotation.ManagedBean;
+
+import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
+
+import daoGenerico.DAOGenerico;
+import modelo.DependenteCliente;
 import modelo.Historico;
 
 @ManagedBean
@@ -17,4 +20,36 @@ public class HistoricoMB {
 	public HistoricoMB() {
 		historicos = dao.buscarTodos();
 	}
+
+	public void inserir() {
+		if (historico.getIdHistorico() == null) {
+			dao.salvar(historico);
+		} else {
+			dao.alterar(historico);
+		}
+		historico = new Historico();
+		historicos = dao.buscarTodos();
+	}
+
+	public void excluir(Long id) {
+		dao.excluir(id);
+		historicos = dao.buscarTodos();
+	}
+
+	public Historico getHistorico() {
+		return historico;
+	}
+
+	public void setHistorico(Historico historico) {
+		this.historico = historico;
+	}
+
+	public List<Historico> getHistoricos() {
+		return historicos;
+	}
+
+	public void setHistoricos(List<Historico> historicos) {
+		this.historicos = historicos;
+	}
+
 }

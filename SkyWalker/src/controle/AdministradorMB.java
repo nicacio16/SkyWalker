@@ -1,11 +1,14 @@
 package controle;
 
-import daoGenerico.DAOGenerico;
 import java.util.ArrayList;
 import java.util.List;
-import javax.annotation.ManagedBean;
+
+import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
+
+import daoGenerico.DAOGenerico;
 import modelo.Administrador;
+import modelo.ClienteTitular;
 
 @ManagedBean
 @ViewScoped
@@ -17,4 +20,36 @@ public class AdministradorMB {
 	public AdministradorMB() {
 		administradores = dao.buscarTodos();
 	}
+
+	public void inserir() {
+		if (administrador.getIdAdministrador() == null) {
+			dao.salvar(administrador);
+		} else {
+			dao.alterar(administrador);
+		}
+		administrador = new Administrador();
+		administradores = dao.buscarTodos();
+	}
+
+	public void excluir(Long id) {
+		dao.excluir(id);
+		administradores = dao.buscarTodos();
+	}
+
+	public Administrador getAdministrador() {
+		return administrador;
+	}
+
+	public void setAdministrador(Administrador administrador) {
+		this.administrador = administrador;
+	}
+
+	public List<Administrador> getAdministradores() {
+		return administradores;
+	}
+
+	public void setAdministradores(List<Administrador> administradores) {
+		this.administradores = administradores;
+	}
+
 }
