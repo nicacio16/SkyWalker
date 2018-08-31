@@ -34,29 +34,6 @@
 		</p:splitButton>
 	</h:form>
 
-	<h:form>
-		<p:growl id="messages" showDetail="true" />
-		<p:contextMenu>
-			<p:menuitem value="Usuário"
-				actionListener="#{clienteTitularMB.inserir()}" update="messages"
-				icon="ui-icon-disk" />
-			<p:menuitem value="Update" actionListener="#{menuView.update}"
-				update="messages" icon="ui-icon-arrowrefresh-1-w" />
-			<p:menuitem value="Delete" actionListener="#{menuView.delete}"
-				ajax="false" icon="ui-icon-close" />
-			<p:menuitem value="Homepage" url="http://www.primefaces.org"
-				icon="ui-icon-extlink" />
-		</p:contextMenu>
-	</h:form>
-
-	<a href="index.xhtml">Página Inicial</a>
-	<a href="Conteudo/apresentarConteudo.xhtml">Conteúdo</a>
-	<a href="Plano/apresentarPlano.xhtml">Plano</a>
-	<a href="Usuario/apresentarUsuario.xhtml">Usuário</a>
-
-	<a href="Conteudo/cadastrarConteudo.xhtml">Cadastrar Conteúdo</a>
-	<a href="Usuario/cadastrarUsuario.xhtml">Cadastrar Usuário</a>
-	<a href="Plano/cadastrarPlano.xhtml">Cadastar Plano</a>
 
 </body>
 </html>
