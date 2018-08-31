@@ -11,6 +11,7 @@
 </h:head>
 <body>
 
+
 	<h:form>
 		<p:growl id="messages" />
 
@@ -35,21 +36,34 @@
 	<br />
 	<br />
 	<h:form>
-		<p:panelGrid columns="5">
+		<p:panelGrid columns="9">
 			<h:outputText value="Nome" />
 			<p:inputText id="nomeCliente" required="true"
 				requiredMessage="Preencher o Nome"
 				value="#{clienteTitularMB.clienteTitular.nome}" />
 			<p:message for="nomeCliente" />
 
-			<p:commandButton value="Cadastrar"
-				update="@form"
+			<h:outputText value="Senha" />
+			<p:inputText id="senhaCliente" required="true"
+				requiredMessage="Preencher o Nome"
+				value="#{clienteTitularMB.clienteTitular.nome}" />
+			<p:message for="senhaCliente" />
+
+
+
+			<p:commandButton value="Entrar" update="@form"
 				actionListener="#{clienteTitularMB.inserir()}" />
 		</p:panelGrid>
 
 	</h:form>
 
-
+	<!-- 
+	<p:contentFlow value="#{imagesView.images}" var="image">
+		<p:graphicImage name="demo/images/nature/#{image}"
+			styleClass="content" />
+		<div class="caption">#{image}</div>
+	</p:contentFlow>
+	 -->
 
 	<!-- 	<h:form> -->
 	<!-- 		<h:panelGrid columns="2" cellpadding="5"> -->

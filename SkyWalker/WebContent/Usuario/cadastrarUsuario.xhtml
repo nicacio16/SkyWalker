@@ -35,17 +35,51 @@
 
 	<br />
 	<br />
-	<h:form>
-		<p:panelGrid columns="5">
-			<h:outputText value="Plano" />
-			<p:inputText id="nomePlano" required="true"
-				requiredMessage="Preencher o Plano" value="#{planoMB.inserir()}" />
-			<p:message for="nomePlano" />
+	<h:form id="cadastroTitular">
+		<p:panelGrid columns="9">
+			<h:outputText value="Nome" cellpadding="5"/>
+			<p:inputText id="nomeCliente" required="true"
+				requiredMessage="Preencher o Nome"
+				value="#{clienteTitularMB.clienteTitular.nome}" />
+			<p:message for="nomeCliente" />
 
+			<h:outputText value="E-mail" cellpadding="5" />
+			<p:inputText id="emailCliente" required="true"
+				requiredMessage="Preencher o e-mail"
+				value="#{clienteTitularMB.clienteTitular.email}" />
+			<p:message for="emailCliente" />
+
+			<h:outputText value="RG" cellpadding="5" />
+			<p:inputText id="rgCliente" required="true"
+				requiredMessage="Preencher o RG"
+				value="#{rgTitularMB.clienteTitular.rg}" />
+			<p:message for="emailCliente" />
+
+			<h:outputText value="CPF" cellpadding="5" />
+			<p:inputText id="cpfCliente" required="true"
+				requiredMessage="Preencher o CPF"
+				value="#{clienteTitularMB.clienteTitular.cpf}" />
+			<p:message for="cpfCliente" />
+
+			<h:outputText value="Cidade" cellpadding="5" />
+			<p:inputText id="cidadeCliente" required="true"
+				requiredMessage="Preencher a Cidade"
+				value="#{clienteTitularMB.clienteTitular.cidade}" />
+			<p:message for="cidadeCliente" />
+
+			<h:outputText value="Telefone" cellpadding="5" />
+			<p:inputText id="telefoneCliente" required="true"
+				requiredMessage="Preencher o Número de Telefone"
+				value="#{clienteTitularMB.clienteTitular.telefone}" />
+			<p:message for="telefoneCliente" />
+
+			<p:commandButton update="@form" value="Adicionar Dependentes"
+				url="http://localhost:8081/SkyWalker/cadastrarUsuarioDependente.xhtml"/>
+				
 			<p:commandButton value="Cadastrar" update="@form"
-				actionListener="#{planoMB.inserir()}" />
-		</p:panelGrid>
+				actionListener="#{clienteTitularMB.inserir()}" />
 
+		</p:panelGrid>
 	</h:form>
 
 
