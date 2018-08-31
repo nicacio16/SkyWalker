@@ -14,8 +14,8 @@
 		<p:growl id="messages" />
 
 		<p:splitButton value="Menu"
-				url="http://localhost:8081/SkyWalker/index.xhtml" update="messages"
-				icon="ui-icon-disk">
+			url="http://localhost:8081/SkyWalker/index.xhtml" update="messages"
+			icon="ui-icon-disk">
 			<p:menuitem value="Cliente"
 				url="http://localhost:8081/SkyWalker/Usuario/apresentarUsuario.xhtml"
 				update="messages" icon="ui-icon-arrowrefresh-1-w" />
@@ -31,30 +31,49 @@
 			<p:separator />
 		</p:splitButton>
 	</h:form>
-	<h:form id="formularioCadastroUsuario">
-		<h:panelGrid columns="8">
-			<h:outputText value="Nome"/>
-			<p:inputText value="#{clienteTitularMB.clienteTitular.nome}" />
-			<h:outputText value="Email"/>
-			<p:inputText value="#{clienteTitularMB.clienteTitular.email}" />
-			<h:outputText value="login"/>
-			<p:inputText value="#{clienteTitularMB.clienteTitular.login}" />
-			<h:outputText value="senha"/>
-			<p:inputText value="#{clienteTitularMB.clienteTitular.senha}" />
-		</h:panelGrid>
-		<h:panelGrid columns="8">
-			<h:outputText value="RG"/>
-			<p:inputText value="#{clienteTitularMB.clienteTitular.rg}"/>
-			<h:outputText value="CPF"/>
-			<p:inputText value="#{clienteTitularMB.clienteTitular.cpf}"/>
-			<h:outputText value="Data de Nascimento" />
-			<p:inputText value="#{clienteTitularMB.clienteTitular.dataNascimento}" />
-			<h:outputText value="Telefone"/>
-			<p:inputText value="#{clienteTitularMB.clienteTitular.telefone}"/>
-		</h:panelGrid>
-		<p:commandButton value="Cadastrar" update="@form" actionListener="#{clienteTitularMB.inserir()}"/>
+
+
+	<br />
+	<br />
+	<h:form>
+		<p:panelGrid columns="5">
+			<h:outputText value="Plano" />
+			<p:inputText id="nomePlano" required="true"
+				requiredMessage="Preencher o Plano" value="#{planoMB.inserir()}" />
+			<p:message for="nomePlano" />
+
+			<p:commandButton value="Cadastrar" update="@form"
+				actionListener="#{planoMB.inserir()}" />
+		</p:panelGrid>
+
 	</h:form>
-	
+
+
+
+	<!-- 	<h:form id="formularioCadastroUsuario"> -->
+	<!-- 		<h:panelGrid columns="8"> -->
+	<!-- 			<h:outputText value="Nome"/> -->
+	<!-- 			<p:inputText value="#{clienteTitularMB.clienteTitular.nome}" /> -->
+	<!-- 			<h:outputText value="Email"/> -->
+	<!-- 			<p:inputText value="#{clienteTitularMB.clienteTitular.email}" /> -->
+	<!-- 			<h:outputText value="login"/> -->
+	<!-- 			<p:inputText value="#{clienteTitularMB.clienteTitular.login}" /> -->
+	<!-- 			<h:outputText value="senha"/> -->
+	<!-- 			<p:inputText value="#{clienteTitularMB.clienteTitular.senha}" /> -->
+	<!-- 		</h:panelGrid> -->
+	<!-- 		<h:panelGrid columns="8"> -->
+	<!-- 			<h:outputText value="RG"/> -->
+	<!-- 			<p:inputText value="#{clienteTitularMB.clienteTitular.rg}"/> -->
+	<!-- 			<h:outputText value="CPF"/> -->
+	<!-- 			<p:inputText value="#{clienteTitularMB.clienteTitular.cpf}"/> -->
+	<!-- 			<h:outputText value="Data de Nascimento" /> -->
+	<!-- 			<p:inputText value="#{clienteTitularMB.clienteTitular.dataNascimento}" /> -->
+	<!-- 			<h:outputText value="Telefone"/> -->
+	<!-- 			<p:inputText value="#{clienteTitularMB.clienteTitular.telefone}"/> -->
+	<!-- 		</h:panelGrid> -->
+	<!-- 		<p:commandButton value="Cadastrar" update="@form" actionListener="#{clienteTitularMB.inserir()}"/> -->
+	<!-- 	</h:form> -->
+
 
 </h:body>
 </html>

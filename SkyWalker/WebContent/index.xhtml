@@ -7,8 +7,7 @@
 
 <h:head>
 	<title>The best of movies</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="assets/css/main.css" />
+
 </h:head>
 <body>
 
@@ -16,8 +15,8 @@
 		<p:growl id="messages" />
 
 		<p:splitButton value="Menu"
-				url="http://localhost:8081/SkyWalker/index.xhtml" update="messages"
-				icon="ui-icon-disk">
+			url="http://localhost:8081/SkyWalker/index.xhtml" update="messages"
+			icon="ui-icon-disk">
 			<p:menuitem value="Cliente"
 				url="http://localhost:8081/SkyWalker/Usuario/apresentarUsuario.xhtml"
 				update="messages" icon="ui-icon-arrowrefresh-1-w" />
@@ -33,6 +32,76 @@
 			<p:separator />
 		</p:splitButton>
 	</h:form>
+	<br />
+	<br />
+	<h:form>
+		<p:panelGrid columns="5">
+			<h:outputText value="Nome" />
+			<p:inputText id="nomeCliente" required="true"
+				requiredMessage="Preencher o Nome"
+				value="#{clienteTitularMB.clienteTitular.nome}" />
+			<p:message for="nomeCliente" />
+
+			<p:commandButton value="Cadastrar"
+				update="@form"
+				actionListener="#{clienteTitularMB.inserir()}" />
+		</p:panelGrid>
+
+	</h:form>
+
+
+
+	<!-- 	<h:form> -->
+	<!-- 		<h:panelGrid columns="2" cellpadding="5"> -->
+
+	<!-- 			<h:outputText value="Nome" cellpadding="5" /> -->
+	<!-- 			<p:inputText id="nomeCliente" required="true" -->
+	<!-- 				requiredMessage="Preencher o Nome" -->
+	<!-- 				value="#{clienteTitularMB.clienteTitular.nome}" /> -->
+	<!-- 			<p:message for="nomeCliente" /> -->
+
+	<!-- 			<h:outputText value="E-mail" cellpadding="5" /> -->
+	<!-- 			<p:inputText id="emailCliente" required="true" -->
+	<!-- 				requiredMessage="Preencher o e-mail" -->
+	<!-- 				value="#{clienteTitularMB.clienteTitular.email}" /> -->
+	<!-- 			<p:message for="emailCliente" /> -->
+
+	<!-- 			<h:outputText value="RG" cellpadding="5" /> -->
+	<!-- 			<p:inputText id="emailCliente" required="true" -->
+	<!-- 				requiredMessage="Preencher o RG" -->
+	<!-- 				value="#{clienteTitularMB.clienteTitular.rg}" /> -->
+	<!-- 			<p:message for="emailCliente" /> -->
+
+	<!-- 			<h:outputText value="CPF" cellpadding="5" /> -->
+	<!-- 			<p:inputText id="cpfCliente" required="true" -->
+	<!-- 				requiredMessage="Preencher o CPF" -->
+	<!-- 				value="#{clienteTitularMB.clienteTitular.cpf}" /> -->
+	<!-- 			<p:message for="cpfCliente" /> -->
+
+	<!-- 			<h:outputText value="Cidade" cellpadding="5" /> -->
+	<!-- 			<p:inputText id="cidadeCliente" required="true" -->
+	<!-- 				requiredMessage="Preencher a Cidade" -->
+	<!-- 				value="#{clienteTitularMB.clienteTitular.cidade}" /> -->
+	<!-- 			<p:message for="cidadeCliente" /> -->
+
+	<!-- 			<h:outputText value="Telefone" cellpadding="5" /> -->
+	<!-- 			<p:inputText id="telefoneCliente" required="true" -->
+	<!-- 				requiredMessage="Preencher o Número de Telefone" -->
+	<!-- 				value="#{clienteTitularMB.clienteTitular.telefone}" /> -->
+	<!-- 			<p:message for="telefoneCliente" /> -->
+
+	<!-- 		</h:panelGrid> -->
+
+	<!-- 		<p:commandButton value="Submit" update="display" -->
+	<!-- 			oncomplete="PF('dlg').show()" /> -->
+
+	<!-- 		<p:dialog widgetVar="dlg" showEffect="fade" hideEffect="fade" -->
+	<!-- 			header="Values"> -->
+	<!-- 			<h:panelGrid id="display" columns="2" cellpadding="5"> -->
+
+	<!-- 			</h:panelGrid> -->
+	<!-- 		</p:dialog> -->
+	<!-- 	</h:form> -->
 
 
 </body>

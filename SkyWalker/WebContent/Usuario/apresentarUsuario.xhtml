@@ -32,5 +32,22 @@
 		</p:splitButton>
 	</h:form>
 
+	<br />
+	<br />
+	<h:form>
+		<p:panelGrid columns="5">
+			<h:outputText value="Titular" />
+			<p:inputText id="nomeTitular" required="true"
+				requiredMessage="Preencher o Cliente Titular"
+				value="#{clienteTitularMB.clienteTitular.nome}" />
+			<p:message for="nomeTitular" />
+
+			<p:commandButton value="Cadastrar" update="@form"
+				actionListener="#{clienteTitularMB.inserir()}" />
+		</p:panelGrid>
+
+	</h:form>
+
+
 </body>
 </html>

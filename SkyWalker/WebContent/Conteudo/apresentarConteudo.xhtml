@@ -32,5 +32,21 @@
 		</p:splitButton>
 	</h:form>
 
+	<br />
+	<br />
+	<h:form>
+		<p:panelGrid columns="5">
+			<h:outputText value="Conteúdo" />
+			<p:inputText id="conteudo" required="true"
+				requiredMessage="Preencher o Conteúdo"
+				value="#{conteudoMB.conteudo.nome}" />
+			<p:message for="conteudo" />
+
+			<p:commandButton value="Cadastrar" update="@form"
+				actionListener="#{conteudoMB.inserir()}" />
+		</p:panelGrid>
+
+	</h:form>
+
 </body>
 </html>
