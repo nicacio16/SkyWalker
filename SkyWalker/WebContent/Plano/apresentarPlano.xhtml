@@ -1,25 +1,36 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.org/ui"> 
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
 
 <h:head>
 	<title>Planos</title>
-</h:head> 
-<body> 
+</h:head>
+<body>
 
-	<a href="index.xhtml">Página Inicial</a>
-	<a href="Conteudo/apresentarConteudo.xhtml">Conteúdo</a>
-	<a href="Plano/apresentarPlano.xhtml">Plano</a>
-	<a href="Usuario/apresentarUsuario.xhtml">Usuário</a>
+	<h:form>
+		<p:growl id="messages" />
 
-	<a href="Conteudo/cadastrarConteudo.xhtml">Cadastrar Conteúdo</a>
-	<a href="Usuario/cadastrarUsuario.xhtml">Cadastrar Usuário</a>
-	<a href="Plano/cadastrarPlano.xhtml">Cadastar Plano</a>
-	<br />
-	<br />
+		<p:splitButton value="Menu"
+				url="http://localhost:8081/SkyWalker/index.xhtml" update="messages"
+				icon="ui-icon-disk">
+			<p:menuitem value="Cliente"
+				url="http://localhost:8081/SkyWalker/Usuario/apresentarUsuario.xhtml"
+				update="messages" icon="ui-icon-arrowrefresh-1-w" />
+			<p:menuitem value="Filmes"
+				url="http://localhost:8081/SkyWalker/Conteudo/apresentarConteudo.xhtml"
+				update="messages" icon="ui-icon-arrowrefresh-1-w" />
+			<p:menuitem value="Planos"
+				url="http://localhost:8081/SkyWalker/Plano/apresentarPlano.xhtml"
+				update="messages" icon="ui-icon-arrowrefresh-1-w" />
+			<p:menuitem value="Home"
+				url="http://localhost:8081/SkyWalker/index.xhtml" update="messages"
+				icon="ui-icon-arrowrefresh-1-w" />
+			<p:separator />
+		</p:splitButton>
+	</h:form>
 
-</body> 
+</body>
 </html>
