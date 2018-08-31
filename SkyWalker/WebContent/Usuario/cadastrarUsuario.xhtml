@@ -1,29 +1,50 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.org/ui"> 
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
 
 <h:head>
 	<title>Cadastro de Usuário</title>
-</h:head> 
-<h:body> 
+</h:head>
+<h:body>
 
 	<a href="index.xhtml">Página Inicial</a>
 	<a href="Conteudo/apresentarConteudo.xhtml">Conteúdo</a>
-	<a href="Plano/apresentaPlano.xhtml">Plano</a>
-	<a href="Usuario/apresentaUsuario.xhtml">Usuário</a>
+	<a href="Plano/apresentarPlano.xhtml">Plano</a>
+	<a href="Usuario/apresentarUsuario.xhtml">Usuário</a>
 
-	<a href="Conteudo/cadastroConteudo.xhtml">Cadastrar Conteúdo</a>
-	<a href="Usuario/cadastroUsuario.xhtml">Cadastrar Usuário</a>
-	<a href="Plano/cadastroPlano.xhtml">Cadastar Plano</a>
+	<a href="Conteudo/cadastrarConteudo.xhtml">Cadastrar Conteúdo</a>
+	<a href="Usuario/cadastrarUsuario.xhtml">Cadastrar Usuário</a>
+	<a href="Plano/cadastrarPlano.xhtml">Cadastar Plano</a>
 	<br />
 	<br />
 
-	<h:form>
-		Nome: <p:inputText value="#{clienteTitularMB.clienteTitular.nome}" />
+	<h:form id="formularioCadastroUsuario">
+		<h:panelGrid columns="8">
+			<h:outputText value="Nome"/>
+			<p:inputText value="#{clienteTitularMB.clienteTitular.nome}" />
+			<h:outputText value="Email"/>
+			<p:inputText value="#{clienteTitularMB.clienteTitular.email}" />
+			<h:outputText value="login"/>
+			<p:inputText value="#{clienteTitularMB.clienteTitular.login}" />
+			<h:outputText value="senha"/>
+			<p:inputText value="#{clienteTitularMB.clienteTitular.senha}" />
+		</h:panelGrid>
+		<h:panelGrid columns="8">
+			<h:outputText value="RG"/>
+			<p:inputText value="#{clienteTitularMB.clienteTitular.rg}"/>
+			<h:outputText value="CPF"/>
+			<p:inputText value="#{clienteTitularMB.clienteTitular.cpf}"/>
+			<h:outputText value="Data de Nascimento" />
+			<p:inputText value="#{clienteTitularMB.clienteTitular.dataNascimento}" />
+			<h:outputText value="Telefone"/>
+			<p:inputText value="#{clienteTitularMB.clienteTitular.telefone}"/>
+		</h:panelGrid>
+		<p:commandButton value="Cadastrar" update="@form" actionListener="#{clienteTitularMB.inserir()}"/>
 	</h:form>
+	
 
-</h:body> 
+</h:body>
 </html>
