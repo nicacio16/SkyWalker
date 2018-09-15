@@ -31,7 +31,7 @@
 			<p:separator />
 		</p:splitButton>
 	</h:form>
-
+<!-- 
 
 	<br />
 	<br />
@@ -52,7 +52,7 @@
 			<h:outputText value="RG" cellpadding="5" />
 			<p:inputText id="rgCliente" required="true"
 				requiredMessage="Preencher o RG"
-				value="#{rgTitularMB.clienteTitular.rg}" />
+				value="#{clienteTitularMB.clienteTitular.rg}" />
 			<p:message for="emailCliente" />
 
 			<h:outputText value="CPF" cellpadding="5" />
@@ -81,32 +81,32 @@
 
 		</p:panelGrid>
 	</h:form>
+ -->
 
 
-
-	<!-- 	<h:form id="formularioCadastroUsuario"> -->
-	<!-- 		<h:panelGrid columns="8"> -->
-	<!-- 			<h:outputText value="Nome"/> -->
-	<!-- 			<p:inputText value="#{clienteTitularMB.clienteTitular.nome}" /> -->
-	<!-- 			<h:outputText value="Email"/> -->
-	<!-- 			<p:inputText value="#{clienteTitularMB.clienteTitular.email}" /> -->
-	<!-- 			<h:outputText value="login"/> -->
-	<!-- 			<p:inputText value="#{clienteTitularMB.clienteTitular.login}" /> -->
-	<!-- 			<h:outputText value="senha"/> -->
-	<!-- 			<p:inputText value="#{clienteTitularMB.clienteTitular.senha}" /> -->
-	<!-- 		</h:panelGrid> -->
-	<!-- 		<h:panelGrid columns="8"> -->
-	<!-- 			<h:outputText value="RG"/> -->
-	<!-- 			<p:inputText value="#{clienteTitularMB.clienteTitular.rg}"/> -->
-	<!-- 			<h:outputText value="CPF"/> -->
-	<!-- 			<p:inputText value="#{clienteTitularMB.clienteTitular.cpf}"/> -->
-	<!-- 			<h:outputText value="Data de Nascimento" /> -->
-	<!-- 			<p:inputText value="#{clienteTitularMB.clienteTitular.dataNascimento}" /> -->
-	<!-- 			<h:outputText value="Telefone"/> -->
-	<!-- 			<p:inputText value="#{clienteTitularMB.clienteTitular.telefone}"/> -->
-	<!-- 		</h:panelGrid> -->
-	<!-- 		<p:commandButton value="Cadastrar" update="@form" actionListener="#{clienteTitularMB.inserir()}"/> -->
-	<!-- 	</h:form> -->
+	 	<h:form id="formularioCadastroUsuario"> 
+			<h:panelGrid columns="2">
+				<h:outputText value="Nome"/>
+				<p:inputText value="#{clienteTitularMB.clienteTitular.nome}" />
+	 			<h:outputText value="Email"/>
+				<p:inputText value="#{clienteTitularMB.clienteTitular.email}" />
+	 			<h:outputText value="login"/>
+	 			<p:inputText value="#{clienteTitularMB.clienteTitular.login}" />
+	 			<h:outputText value="senha"/>
+				<p:inputText value="#{clienteTitularMB.clienteTitular.senha}" />
+	 		</h:panelGrid>
+	 		<h:panelGrid columns="2">
+	 			<h:outputText value="RG"/>
+	 			<p:inputText value="#{clienteTitularMB.clienteTitular.rg}"/>
+	 			<h:outputText value="CPF"/>
+	 			<p:inputText value="#{clienteTitularMB.clienteTitular.cpf}"/>
+	 			<h:outputText value="Cidade"/>
+	 			<p:inputText value="#{clienteTitularMB.clienteTitular.cidade}"/>
+	 			<h:outputText value="Telefone"/> 
+	 			<p:inputText value="#{clienteTitularMB.clienteTitular.telefone}"/> 
+			</h:panelGrid>
+	 		<p:commandButton value="Cadastrar" update="@form" actionListener="#{clienteTitularMB.inserir()}"/> 
+		</h:form> 
 
 
 </h:body>

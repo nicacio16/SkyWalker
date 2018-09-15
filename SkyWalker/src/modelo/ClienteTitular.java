@@ -1,13 +1,10 @@
 package modelo;
 
-import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 @Entity
 public class ClienteTitular {
@@ -26,9 +23,6 @@ public class ClienteTitular {
 	private String cidade;
 	@Column(nullable = false)
 	private String telefone;
-	@Column(nullable = false)
-	@Temporal(TemporalType.DATE)
-	private Date dataNascimento;
 	@Column(nullable = false, unique = true)
 	private String login;
 	@Column(nullable = false)
@@ -88,14 +82,6 @@ public class ClienteTitular {
 
 	public void setTelefone(String telefone) {
 		this.telefone = telefone;
-	}
-
-	public Date getDataNascimento() {
-		return dataNascimento;
-	}
-
-	public void setDataNascimento(Date dataNascimento) {
-		this.dataNascimento = dataNascimento;
 	}
 
 	public String getLogin() {
