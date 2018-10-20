@@ -12,7 +12,7 @@ public class ClienteTitular {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long idCliente;
 	@Column(nullable = false)
-	private String nome;
+	private String nome = "Yuri";
 	@Column(unique = true, nullable = false)
 	private String email;
 	@Column(unique = true, nullable = false)

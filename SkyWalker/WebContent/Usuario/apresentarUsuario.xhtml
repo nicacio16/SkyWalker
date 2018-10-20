@@ -10,44 +10,26 @@
 </h:head>
 <body>
 
-	<h:form>
-		<p:growl id="messages" />
+	<a href="#{facesContext.externalContext.request.contextPath}/usuario/historicoUsuario.jsf">Histórico</a>&nbsp;&nbsp;
 
-		<p:splitButton value="Menu"
-				url="http://localhost:8081/SkyWalker/index.xhtml" update="messages"
-				icon="ui-icon-disk">
-			<p:menuitem value="Cliente"
-				url="http://localhost:8081/SkyWalker/Usuario/apresentarUsuario.xhtml"
-				update="messages" icon="ui-icon-arrowrefresh-1-w" />
-			<p:menuitem value="Filmes"
-				url="http://localhost:8081/SkyWalker/Conteudo/apresentarConteudo.xhtml"
-				update="messages" icon="ui-icon-arrowrefresh-1-w" />
-			<p:menuitem value="Planos"
-				url="http://localhost:8081/SkyWalker/Plano/apresentarPlano.xhtml"
-				update="messages" icon="ui-icon-arrowrefresh-1-w" />
-			<p:menuitem value="Home"
-				url="http://localhost:8081/SkyWalker/index.xhtml" update="messages"
-				icon="ui-icon-arrowrefresh-1-w" />
-			<p:separator />
-		</p:splitButton>
-	</h:form>
+	<a href="#{facesContext.externalContext.request.contextPath}">Cadastrar Dependente</a>&nbsp;&nbsp;
 
-	<br />
-	<br />
-	<h:form>
-		<p:panelGrid columns="5">
-			<h:outputText value="Titular" />
-			<p:inputText id="nomeTitular" required="true"
-				requiredMessage="Preencher o Cliente Titular"
-				value="#{clienteTitularMB.clienteTitular.nome}" />
-			<p:message for="nomeTitular" />
+	<a href="#{facesContext.externalContext.request.contextPath}">Editar Perfil</a>&nbsp;&nbsp;
+	
+	<b>Olá, #{clienteTitularMB.clienteTitular.nome}</b>
+<br/><br/>
+	
+	
 
-			<p:commandButton value="Cadastrar" update="@form"
-				actionListener="#{clienteTitularMB.inserir()}" />
-		</p:panelGrid>
-
-	</h:form>
-
-
+	<img src="#{facesContext.externalContext.request.contextPath}/imagens/velozes_e_furioso.jpg" width="250dp" height="150dp"/><br/>
+	<a href="#">Velozes e Furiosos</a><br/>
+	
+	<img src="#{facesContext.externalContext.request.contextPath}/imagens/vingadores.jpeg" width="250dp" height="150dp"/><br/>
+	<a href="#">Vingadores</a><br/>
+	
+	<img src="#{facesContext.externalContext.request.contextPath}/imagens/no_limite_do_amanha.jpg" width="250dp" height="150dp"/><br/>
+	<a href="#">No Limite do Amanhã</a><br/>
+	
+	
 </body>
 </html>
